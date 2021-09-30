@@ -1,0 +1,439 @@
+[
+  {
+    "name": "Company",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer los datos de la empresa"
+    ],
+    "collaborators": [
+      "CompanyMaterial",
+      "CompanyMaterialCategory",
+      "Location",
+      "User",
+      ""
+    ]
+  },
+  {
+    "name": "CompanyMaterial",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer los materiales de la empresa"
+    ],
+    "collaborators": [
+      "CompanyStock",
+      "CompanyMaterialCategory",
+      "MaterialCategory"
+    ]
+  },
+  {
+    "name": "Publication",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer los datos de la publicacion"
+    ],
+    "collaborators": [
+      "Company",
+      "PublicationItem"
+    ]
+  },
+  {
+    "name": "Location",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer la información de la zona"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "Entrepreneur",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer la información del emprendedor"
+    ],
+    "collaborators": [
+      "Location",
+      "User",
+      "Qualification"
+    ]
+  },
+  {
+    "name": "Sale",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer toda la información de la venta"
+    ],
+    "collaborators": [
+      "PublicationItem",
+      "Company",
+      "Entrepreneur"
+    ]
+  },
+  {
+    "name": "CompanyMaterialCategory",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Categorizar los materiales de cada empresa"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "MaterialCategory",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer todos los materiales que se encuentran disponibles"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "ISalesReport<T>",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 3,
+    "responsibilities": [
+      "Generar texto del reporte"
+    ],
+    "collaborators": [
+      "SaleAdmin"
+    ]
+  },
+  {
+    "name": "ReportEntrepreneur",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Generar el texto del reporte"
+    ],
+    "collaborators": [
+      "ISalesReport<Enterpreneur>"
+    ]
+  },
+  {
+    "name": "ReportCompany",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Generar el texto del Reporte"
+    ],
+    "collaborators": [
+      "ISalesReport<Company>"
+    ]
+  },
+  {
+    "name": "User",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer la información de todos los usuarios"
+    ],
+    "collaborators": [
+      "Account"
+    ]
+  },
+  {
+    "name": "ICommand",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 3,
+    "responsibilities": [
+      "Responder a los comandos generados por los usuarios"
+    ],
+    "collaborators": [
+      "ICommand"
+    ]
+  },
+  {
+    "name": "Qualificaton",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer toda la información de una habilitación"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "CompanyStock",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer los datos de el Stock"
+    ],
+    "collaborators": [
+      "Location"
+    ]
+  },
+  {
+    "name": "PublicationItem",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "conocer el item a publicar"
+    ],
+    "collaborators": [
+      "CompanyMaterial"
+    ]
+  },
+  {
+    "name": "Account",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer los datos de la persona en la aplicación de mensajería"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "UserAdmin",
+    "superclasses": "DataAdmin<User>",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "acceder y modificar los datos almacenados del usuario"
+    ],
+    "collaborators": [
+      "User",
+      ""
+    ]
+  },
+  {
+    "name": "QualificationAdmin",
+    "superclasses": "DataAdmin<Qualification>",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "acceder y modificar los datos almacenados de las habilitaciones"
+    ],
+    "collaborators": [
+      "Qualification",
+      ""
+    ]
+  },
+  {
+    "name": "CompanyAdmin",
+    "superclasses": "DataAdmin<Company>",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "acceder y modificar los datos almacenados de la compania "
+    ],
+    "collaborators": [
+      "Company",
+      ""
+    ]
+  },
+  {
+    "name": "EnterpreneurAdmin",
+    "superclasses": "DataAdmin<Enterpreneur>",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "acceder y modificar los datos almacenados  del emprendedor"
+    ],
+    "collaborators": [
+      "Enterpreneur",
+      ""
+    ]
+  },
+  {
+    "name": "PublicationAdmin",
+    "superclasses": "DataAdmin<Publication>",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "acceder y modificar los datos almacenados de la publicación"
+    ],
+    "collaborators": [
+      "Publication",
+      ""
+    ]
+  },
+  {
+    "name": "MaterialCategoryAdmin",
+    "superclasses": "DataAdmin<MaterialCategory>",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "acceder y modificar los datos almacenados de los materiales"
+    ],
+    "collaborators": [
+      "MaterialCategory",
+      ""
+    ]
+  },
+  {
+    "name": "SaleAdmin",
+    "superclasses": "DataAdmin<Sale>",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "acceder y modificar los datos almacenados de las ventas"
+    ],
+    "collaborators": [
+      "Sale",
+      ""
+    ]
+  },
+  {
+    "name": "DataAdmin<T>",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 2,
+    "responsibilities": [
+      "conocer los datos del storage"
+    ],
+    "collaborators": [
+      "Storage"
+    ]
+  },
+  {
+    "name": "StorageProvider",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "manejar el almacenamiento de datos"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "Comand (1... N)",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Ejecutar la lógica designada a un comando especifico"
+    ],
+    "collaborators": [
+      "ResponseHandler",
+      "UserAdmin",
+      "QualificationAdmin",
+      "CompanyAdmin",
+      "EntrepreneurAdmin",
+      "PublicationAdmin",
+      "MaterialCategoryAdmin",
+      "SalesAdmin",
+      "ReportEntepreneur",
+      "ReportCompany"
+    ]
+  },
+  {
+    "name": "ComandHandler",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Preprocesar el comando"
+    ],
+    "collaborators": [
+      "Comand(1)"
+    ]
+  },
+  {
+    "name": "MessageHandler",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Recibe el mensaje y lo Procesa "
+    ],
+    "collaborators": [
+      "ComandHandler",
+      "UserAuthenticator"
+    ]
+  },
+  {
+    "name": "UserAuthenticator",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Obtener que usuario es el que se esta comunicando"
+    ],
+    "collaborators": [
+      "UserAdmin"
+    ]
+  },
+  {
+    "name": "Message",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Contiene los datos del mensaje"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "IMessagingService",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 3,
+    "responsibilities": [
+      "Define las operaciones que manejan las clases que interactúan con los servicios de mensajería "
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "MessageApi#Service#",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "interactuar con los servicios de mensajeria"
+    ],
+    "collaborators": [
+      "Message",
+      "MessageHandler"
+    ]
+  },
+  {
+    "name": "ResponseHandler",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Responder al usuario"
+    ],
+    "collaborators": [
+      "MessageAPIWhatsapp"
+    ]
+  }
+]
